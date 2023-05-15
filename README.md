@@ -109,3 +109,37 @@ Personal Note
 > mat*10                                                    // multiply all elements by 10
 
 ```
+
+## Import Data, Copy Data from Excel to R - CSV & TXT Files
+- The steps outlined here are the same for most other spreadsheet applications!
+ -  Save the data file as : `comma separated value: .csv` or `tab delimited text file: .txt` (`.csv` is better)
+ ```
+ > help(read.csv)                       // help() and ? - used to get some info about any command.
+ > ?read.csv
+ 
+ // We can read .csv file in two following ways:
+ 
+ 1. Using read.csv()
+ 
+ > data1 <- read.csv(file.choose(), header=T)   // file.choose() - will allow to slect file after enter. header=T : first line is header.
+ > data1                                        // will print entire data.
+ 
+ 2. Using read.table()
+ 
+ > data2 <- read.table(file.choose(), header=T, sep=",")   // file.choose() - will allow to slect file after enter. header=T : first line is header. separated by ','
+ > data2                                                   // will print entire data.
+ 
+ // We can read .txt file in two following ways:
+ 
+ 1. Using read.delim
+ 
+ > data3 <- read.delim(file.choose(), header=T)            // file.choose() - will allow to slect file after enter. header=T : first line is header.
+ > data3                                                    // will print entire data.
+ 
+ 2. Using read.table()
+ 
+ > data4 <- read.table(file.choose(), header=T, sep=",")    // file.choose() - will allow to slect file after enter. header=T : first line is header. separated by ','
+ > data4                                                      // will print entire data.
+ ```
+
+
